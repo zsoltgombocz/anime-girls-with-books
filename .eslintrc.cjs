@@ -25,5 +25,6 @@ module.exports = {
         'react/jsx-one-expression-per-line': [0],
         'react/self-closing-comp': [1, { component: true, html: false }],
         'import/no-extraneous-dependencies': [2, { devDependencies: true }],
+        'react/react-in-jsx-scope': [0],
     },
 };
