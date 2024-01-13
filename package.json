@@ -1,7 +1,7 @@
 {
-  "name": "ovikom",
-  "private": true,
-  "version": "0.0.0",
+  "name": "anime-girls-with-books",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
