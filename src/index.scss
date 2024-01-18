@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.bunny.net/css?family=akshar:300,400,500,600,700);
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Akshar', sans-serif;
+
+    font-size: 18px;
+}
+
+.theme-switcher {
+    @apply border border-white-secondary dark:border-gray-secondary relative
+    rounded-md divide-x divide-white-secondary dark:divide-gray-secondary py-2.5 flex;
+
+    .theme-button {
+        @apply relative z-10 w-24;
+    
+        & label {
+            & > span {
+                @apply cursor-pointer text-lg flex flex-col justify-center 
+                items-center px-6 rounded-md dark:text-white-primary/50 text-gray-primary/50;
+
+                & > i {
+                    @apply flex items-center h-7 text-xl;
+                }
+            }
+    
+            &.active > span {
+                @apply text-white-primary;
+            }
+        }
+    }
+    
+    .active-background {
+        @apply bg-primary shadow-sm rounded-md
+        absolute w-[calc(4rem)] h-[calc(100%_-_1rem)] top-2 left-[1rem];
+    }  
+}
+
+.icon {
+    @apply cursor-pointer;
+}
+
