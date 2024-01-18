@@ -16,3 +16,8 @@ export interface ButtonInterface {
     redirect?: string | undefined;
     icon?: ReactElement | undefined;
 }
+
+export interface PageTitleInterface {
+    title: string;
+    icon?: ReactElement | undefined;
+}
