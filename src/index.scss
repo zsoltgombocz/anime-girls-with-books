@@ -26,11 +26,11 @@ body,
     
         & label {
             & > span {
-                @apply cursor-pointer text-lg flex flex-col justify-center 
+                @apply cursor-pointer flex flex-col justify-center 
                 items-center px-6 rounded-md dark:text-white-primary/50 text-gray-primary/50;
 
                 & > i {
-                    @apply flex items-center h-7 text-xl;
+                    @apply flex items-center h-5;
                 }
             }
     
@@ -48,5 +48,9 @@ body,
 
 .icon {
     @apply cursor-pointer;
+}
+
+section {
+    @apply lg:px-20 lg:text-lg;
 }
 
