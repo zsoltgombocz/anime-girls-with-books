@@ -28,7 +28,7 @@ export default function MenuElement({
 
     return (
         <m.div
-            className={`cursor-pointer flex flex-col items-center w-1/3 py-3 h-full relative overflow-hidden ${hoverStyle} ${activeStyle}`}
+            className={`cursor-pointer flex flex-col items-center w-1/3 py-1 lg:py-2 h-full relative overflow-hidden justify-center ${hoverStyle} ${activeStyle}`}
             whileHover={whileHover}
             variants={variants}
             initial={initial}
@@ -38,7 +38,11 @@ export default function MenuElement({
         >
             <Icon />
 
-            <span className={`text-lg ${hover && 'text-white-primary'}`}>
+            <span
+                className={`text-sm lg:text-base ${
+                    hover && 'text-white-primary'
+                }`}
+            >
                 {label}
             </span>
             <AnimatePresence>
