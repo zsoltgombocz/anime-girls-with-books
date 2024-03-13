@@ -6,7 +6,7 @@ import Home from './svg/Home';
 import MenuElement from './MenuElement';
 import Information from './svg/Information';
 
-export default function Header() {
+export default function Menu({ hide }: { hide: boolean }) {
     const location = useLocation();
 
     const transitionConfig = {
@@ -19,10 +19,11 @@ export default function Header() {
     };
 
     return (
-        <footer
+        <m.footer
             className={
                 'z-50 fixed bottom-0 w-full bg-white-primary dark:bg-gray-primary drop-shadow-2xl px-0 flex flex-row justify-between items-center gap-0 lg:gap-20 h-16 overflow-clip'
             }
+            animate={hide ? { bottom: '-200px' } : { bottom: 0 }}
         >
             <MenuElement
                 Icon={Home}
@@ -45,6 +46,6 @@ export default function Header() {
                 isActive={location.pathname === '/information'}
                 to={'information'}
             />
-        </footer>
+        </m.footer>
     );
 }
