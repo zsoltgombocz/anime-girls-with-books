@@ -4,7 +4,7 @@ export default function Logo() {
     return (
         <Link
             to={'/'}
-            className={'text-2xl leading-[1.35rem] font-medium font-logo'}
+            className={'text-2xl leading-[1.35rem] font-medium font-logo logo'}
         >
             <span>{'Anime'}</span>
             <span className={'text-primary font-extrabold ml-1'}>

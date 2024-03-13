@@ -51,6 +51,10 @@ body,
 }
 
 section {
-    @apply lg:px-20 lg:text-lg;
+    @apply lg:px-40 lg:text-lg;
+}
+
+a:not(.logo) {
+    @apply text-primary;
 }
 
