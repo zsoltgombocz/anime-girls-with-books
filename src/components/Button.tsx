@@ -8,7 +8,7 @@ export default function Button({ text, redirect, icon }: ButtonInterface) {
     const [hover, setHover] = useState(false);
 
     const baseClasses = classNames(
-        'inline-block py-3 px-8 uppercase shadow-md border-2 border-primary text-primary z-10 relative rounded-md text-lg font-bold flex items-center justify-center gap-3'
+        'inline-block py-2 px-5 md:py-3 px-8 uppercase shadow-md border-2 border-primary text-primary z-10 relative rounded-md text-lg font-bold flex items-center justify-center gap-3'
     );
 
     const hoverClasses = classNames('hover:text-white-primary');
