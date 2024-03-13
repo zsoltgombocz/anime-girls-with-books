@@ -21,7 +21,7 @@ export default function Header() {
     return (
         <footer
             className={
-                'fixed bottom-0 w-full bg-white-primary dark:bg-gray-primary drop-shadow-2xl px-0 flex flex-row justify-between items-center gap-0 lg:gap-20 h-16 overflow-clip'
+                'z-50 fixed bottom-0 w-full bg-white-primary dark:bg-gray-primary drop-shadow-2xl px-0 flex flex-row justify-between items-center gap-0 lg:gap-20 h-16 overflow-clip'
             }
         >
             <MenuElement
