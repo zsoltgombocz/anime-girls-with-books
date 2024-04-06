@@ -19,18 +19,19 @@ body,
 
 .theme-switcher {
     @apply border border-white-secondary dark:border-gray-secondary relative
-    rounded-md divide-x divide-white-secondary dark:divide-gray-secondary py-2.5 flex;
+    rounded-md sm:divide-x divide-white-secondary dark:divide-gray-secondary 
+    sm:py-2.5 flex-col sm:flex-row w-14 h-14 sm:h-[unset] sm:w-[unset];
 
     .theme-button {
-        @apply relative z-10 w-24;
+        @apply z-10 w-14 h-14 sm:h-[unset] sm:w-24 absolute sm:relative;
     
         & label {
             & > span {
                 @apply cursor-pointer flex flex-col justify-center 
-                items-center px-6 rounded-md dark:text-white-primary/50 text-gray-primary/50;
+                items-center px-6 rounded-md dark:text-white-primary/50 text-gray-primary/50 w-full h-full;
 
                 & > i {
-                    @apply flex items-center h-5;
+                    @apply flex items-center h-5 text-2xl sm:text-base;
                 }
             }
     
@@ -42,7 +43,7 @@ body,
     
     .active-background {
         @apply bg-primary shadow-sm rounded-md
-        absolute w-[calc(4rem)] h-[calc(100%_-_1rem)] top-2 left-[1rem];
+        absolute w-[calc(4rem)] h-[calc(100%_-_1rem)] top-2 left-[1rem] hidden sm:block;
     }  
 }
 

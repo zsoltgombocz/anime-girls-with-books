@@ -24,7 +24,7 @@ export default function ThemeSwitcher() {
     const { theme: currentTheme, setTheme } = useThemeStore();
 
     return (
-        <div className={'theme-switcher'}>
+        <div className={'theme-switcher hidden md:flex'}>
             {Object.values(Theme).map((theme: Theme) => (
                 <div key={theme} className={'theme-button'}>
                     <input

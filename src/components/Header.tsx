@@ -1,5 +1,6 @@
 import ThemeSwitcher from './ThemeSwitcher';
 import Logo from './Logo';
+import MobileThemeSwitcher from './MobileThemeSwitcher';
 
 export default function Header() {
     return (
@@ -11,6 +12,7 @@ export default function Header() {
             <Logo />
 
             <ThemeSwitcher />
+            <MobileThemeSwitcher />
         </header>
     );
 }
