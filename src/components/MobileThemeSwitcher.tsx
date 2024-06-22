@@ -1,17 +1,17 @@
-import { motion as m } from 'framer-motion';
+import { AnimatePresence, motion as m, transform } from 'framer-motion';
 import useThemeStore, { Theme } from '../states/themeStore';
 
 const themeButtons = {
     [Theme.LIGHT]: {
-        icon: <i className={'bi bi-brightness-high'} />,
+        icon: <i className={'bi bi-brightness-high text-xl'} />,
         label: 'Light',
     },
     [Theme.SYSTEM]: {
-        icon: <i className={'bi bi-display'} />,
+        icon: <i className={'bi bi-display text-xl'} />,
         label: 'System',
     },
     [Theme.DARK]: {
-        icon: <i className={'bi bi-moon'} />,
+        icon: <i className={'bi bi-moon text-xl'} />,
         label: 'Dark',
     },
 };
@@ -33,15 +33,20 @@ export default function MobileThemeSwitcher() {
 
     return (
         <div
-            className={'mobile-theme-switcher flex md:hidden'}
+            className={'flex md:hidden'}
             onClick={() => setTheme(getNextTheme(currentTheme) as Theme)}
             aria-hidden={'true'}
         >
-            {Object.values(Theme).map((theme: Theme) => (
-                <div key={theme} className={'theme-button'}>
-                    <span>{themeButtons[theme].icon}</span>
-                </div>
-            ))}
+            <AnimatePresence>
+                <m.div
+                    initial={{ position: 'absolute', x: 0, y: -50, opacity: 0 }}
+                    animate={{ position: 'relative', x: 0, y: 0, opacity: 1 }}
+                    exit={{ position: 'absolute', x: 0, y: 50, opacity: 0 }}
+                    key={currentTheme}
+                >
+                    {themeButtons[currentTheme].icon}
+                </m.div>
+            </AnimatePresence>
         </div>
     );
 }
