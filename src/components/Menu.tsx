@@ -29,7 +29,7 @@ export default function Menu({ hide }: { hide: boolean }) {
                 Icon={Home}
                 label={'HOME'}
                 whileHover={{ scale: 1.1, ...transitionConfig }}
-                isActive={location.pathname === '/home'}
+                isActive={location.pathname === '/'}
                 to={'/'}
             />
             <MenuElement
