@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Component imports
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './Layout';
 import Index from './views/Index';
 import Informations from './views/Informations';
@@ -32,9 +33,20 @@ const router = createBrowserRouter([
         ],
     },
 ]);
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            staleTime: 1000 * 60 * 1, // 1 minute
+            refetchOnWindowFocus: false,
+            refetchOnMount: false,
+        },
+    },
+});
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <QueryClientProvider client={queryClient}>
+            <RouterProvider router={router} />
+        </QueryClientProvider>
     </React.StrictMode>
 );

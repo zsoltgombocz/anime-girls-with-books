@@ -26,5 +26,8 @@ module.exports = {
         'react/self-closing-comp': [1, { component: true, html: false }],
         'import/no-extraneous-dependencies': [2, { devDependencies: true }],
         'react/react-in-jsx-scope': [0],
+        'lines-between-class-members': 'off',
+        '@typescript-eslint/lines-between-class-members': 'off',
+        '@typescript-eslint/no-inferrable-types': 'off',
     },
 };

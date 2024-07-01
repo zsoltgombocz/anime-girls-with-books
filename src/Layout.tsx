@@ -41,7 +41,7 @@ export default function Layout() {
             <Header />
             <main
                 className={
-                    'bg-white-secondary dark:bg-gray-secondary w-full h-full flex flex-col flex-grow px-8 py-36 overflow-auto'
+                    'bg-white-secondary dark:bg-gray-secondary w-full h-full flex flex-col flex-grow px-8 py-28 overflow-auto'
                 }
                 ref={mainlayoutRef}
             >

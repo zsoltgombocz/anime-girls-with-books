@@ -59,3 +59,14 @@ a:not(.logo) {
     @apply text-primary;
 }
 
+.spinner_ngNb{
+    animation:spinner_ZRWK 1.2s cubic-bezier(0.52,.6,.25,.99) infinite
+}
+.spinner_6TBP{
+    animation-delay:.6s
+}
+@keyframes spinner_ZRWK{
+    0%{transform:translate(12px,12px) scale(0);opacity:1}
+    100%{transform:translate(0,0) scale(1);opacity:0}
+}
+
